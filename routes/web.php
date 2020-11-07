@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use \App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,17 +14,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/',[\App\Http\Controllers\PostController::class, 'index'])->name('index');
+Route::get('/',[PostController::class, 'index'])->name('index');
 
-Route::get('/create',[\App\Http\Controllers\PostController::class, 'create'])->name('create');
+Route::get('/create',[PostController::class, 'create'])->name('create');
 
-Route::get('/show/{post}',[\App\Http\Controllers\PostController::class, 'show'])->name('show');
+Route::get('/show/{post}',[PostController::class, 'show'])->name('show');
 
-Route::post('/create',[\App\Http\Controllers\PostController::class, 'store'])->name('store');
+Route::post('/create',[PostController::class, 'store'])->name('store');
 
-Route::get('/{post}/edit',[\App\Http\Controllers\PostController::class, 'edit'])->name('edit');;
+Route::get('/{post}/edit',[PostController::class, 'edit'])->name('edit');;
 
-Route::put('/{post}',[\App\Http\Controllers\PostController::class, 'update'])->name('update');
+Route::put('/{post}',[PostController::class, 'update'])->name('update');
+
+Route::delete('/{post}',[PostController::class, 'destroy'])->name('destroy');
 
 Auth::routes();
 

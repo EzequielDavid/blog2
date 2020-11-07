@@ -13,9 +13,13 @@
                 <p class="text-gray-600">Fecha de Posteo: {{$post->created_at}}</p>
             </div>
             <div>
-                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"><a href="{{route('edit',$post)}}">Update Post</a></button>
-                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"><a href="">Delete Post</a></button>
 
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-2"><a href="{{route('edit',$post)}}">Update Post</a></button>
+                <form class="inline-block py-2 px-4 mx-1" action="{{route('destroy',$post)}}" method="post">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Delete Post</button>
+                </form>
             </div>
         </div>
     </div>
