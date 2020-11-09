@@ -30,6 +30,14 @@ class PostController extends Controller
 
     public function store(Request $request)
     {
+         $request->validate
+         ([
+            'title'=> 'required',
+            'postContent'=> 'required',
+            'category'=> 'required',
+            'image'=> 'required',
+        ]);
+
         $post = new Post();
         $post->title = $request->title;
         $post->content = $request->postContent;
@@ -75,6 +83,11 @@ class PostController extends Controller
      */
     public function update(Request $request,Post $post)
     {
+        $request->validate([
+            'title'=>'required',
+            'postContent'=>'required',
+        ]);
+
         $post->title=$request->title;
         $post->content=$request->postContent;
 

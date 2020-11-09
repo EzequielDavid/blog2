@@ -2,7 +2,7 @@
 @extends('layouts.app')
 
 @section('content')
-<h1 class="text-center m-6 text-xl">Ultimos Post</h1>
+<h1 class="text-center m-6 text-4xl">Ultimos Post</h1>
 <div class="divide-y divide-gray-400 text-center">
     <ul class="list-none text-center">
         @foreach($posts as $post)
