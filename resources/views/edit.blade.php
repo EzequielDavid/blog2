@@ -24,6 +24,10 @@
                     Content:
                     <br>
                     <textarea class="rounded @error('postContent') is-invalid @enderror" name="postContent" rows="5" cols="50">{{old('postContent',$post->content)}}</textarea>
+
+                    @error('postContent')
+                    <div class="alert alert-danger">{{$message}}</div>
+                    @enderror
                 </label>
             </div>
 

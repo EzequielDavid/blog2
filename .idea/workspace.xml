@@ -4,9 +4,8 @@
     <list default="true" id="5eb6a09b-eae1-40fb-bd83-97e565d4db2a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,7 +168,9 @@
       <workItem from="1604667635357" duration="17807000" />
       <workItem from="1604764160618" duration="7600000" />
       <workItem from="1604854853395" duration="1592000" />
-      <workItem from="1604881362919" duration="3555000" />
+      <workItem from="1604881362919" duration="4379000" />
+      <workItem from="1604965739928" duration="586000" />
+      <workItem from="1605022317441" duration="2566000" />
     </task>
     <servers />
   </component>
@@ -177,6 +178,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="137" y="0" width="1092" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605022597845">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="137" y="0" width="1092" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1605022597845" />
     <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1604632789595">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -185,5 +190,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1604687465252" />
+    <state x="4" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1605023533542">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="4" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1605023533542" />
   </component>
 </project>
