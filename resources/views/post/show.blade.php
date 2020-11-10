@@ -14,8 +14,8 @@
             </div>
             <div>
 
-                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-2"><a href="{{route('edit',$post)}}">Update Post</a></button>
-                <form class="inline-block py-2 px-4 mx-1" action="{{route('destroy',$post)}}" method="post">
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-2"><a href="{{route('post.edit',$post)}}">Update Post</a></button>
+                <form class="inline-block py-2 px-4 mx-1" action="{{route('post.destroy',$post)}}" method="post">
                     @csrf
                     @method('DELETE')
                     <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Delete Post</button>

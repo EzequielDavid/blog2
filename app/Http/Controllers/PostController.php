@@ -13,37 +13,34 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::latest()->paginate();
-        return view('welcome',compact('posts'));
+        return view('post.welcome',compact('posts'));
     }
 
     public function create()
     {
-        return view('create');
+        return view('post.create');
     }
 
     public function store(StorePost $request)
     {
-        $post = new Post();
-        $post->title = $request->title;
-        $post->content = $request->postContent;
-        $post->category = $request->category;
+        $post = Post::create($request->all());
 
         $path= $request->file('image')->store('public');
         $post->image = basename($path);
 
-         $post->save();
+        $post->save();
 
-         return redirect()->route('show',$post->id);
+         return redirect()->route('post.show',$post);
     }
 
     public function show(Post $post)
     {
-        return view('show',compact('post'));
+        return view('post.show',compact('post'));
     }
 
     public function edit(Post $post)
     {
-       return view('edit',compact('post'));
+       return view('post.edit',compact('post'));
     }
 
     public function update(UpdatePost $request,Post $post)
@@ -52,7 +49,7 @@ class PostController extends Controller
         $post->content=$request->postContent;
 
         $post->save();
-        return redirect()->route('show',$post->id);
+        return redirect()->route('post.show',$post->id);
 
     }
 
@@ -60,7 +57,7 @@ class PostController extends Controller
     {
         $post->delete();
 
-        return redirect()->route('index')->with('succes','Post Delete');
+        return redirect()->route('post.index')->with('succes','Post Delete');
 
     }
 }

@@ -25,7 +25,7 @@ class StorePost extends FormRequest
     {
         return [
             'title'=> 'required|min:5',
-            'postContent'=> 'required|min:10',
+            'content'=> 'required|min:10',
             'image'=> 'required',
             'category'=> 'required|min:5'
         ];
@@ -35,7 +35,7 @@ class StorePost extends FormRequest
     {
         return [
              'title.required'=> 'the title is required',
-            'postContent.required'=> 'the post content is required',
+            'content.required'=> 'the post content is required',
             'image.required'=> 'the image is required',
             'category.required'=> 'the category is required'
         ];

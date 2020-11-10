@@ -6,7 +6,7 @@
 <div class="divide-y divide-gray-400 text-center">
     <ul class="list-none text-center">
         @foreach($posts as $post)
-            <li class="text-center py-2"><a href="{{route('show',$post->id)}}" class="no-underline">{{$post->title}}</a></li>
+            <li class="text-center py-2"><a href="{{route('post.show',$post->id)}}" class="no-underline">{{$post->title}}</a></li>
             <span class="text-gray-600">{{$post->created_at}}</span>
         @endforeach
     </ul>

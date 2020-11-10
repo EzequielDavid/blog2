@@ -4,8 +4,15 @@
     <list default="true" id="5eb6a09b-eae1-40fb-bd83-97e565d4db2a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/StorePost.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/StorePost.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/UpdatePost.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/UpdatePost.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/post/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/post/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/post/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/post/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,6 +152,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\blog2\resources\views\post" />
       <recent name="C:\xampp\htdocs\blog2\resources\views" />
       <recent name="C:\xampp\htdocs\blog2\resources\views\posts" />
     </key>
@@ -170,7 +178,9 @@
       <workItem from="1604854853395" duration="1592000" />
       <workItem from="1604881362919" duration="4379000" />
       <workItem from="1604965739928" duration="586000" />
-      <workItem from="1605022317441" duration="2566000" />
+      <workItem from="1605022317441" duration="4062000" />
+      <workItem from="1605030417820" duration="3890000" />
+      <workItem from="1605048895515" duration="1265000" />
     </task>
     <servers />
   </component>
@@ -186,6 +196,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1604632789595" />
+    <state x="804" y="119" key="FileChooserDialogImpl" timestamp="1605045312133">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="804" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1605045312133" />
     <state x="517" y="287" key="NewPhpFileDialog" timestamp="1604687465252">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

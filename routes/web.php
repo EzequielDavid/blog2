@@ -14,20 +14,10 @@ use \App\Http\Controllers\PostController;
 |
 */
 
-Route::get('/',[PostController::class, 'index'])->name('index');
+Route::get('/', [PostController::class, 'index'])->name('index');
 
-Route::get('/create',[PostController::class, 'create'])->name('create');
-
-Route::get('/show/{post}',[PostController::class, 'show'])->name('show');
-
-Route::post('/create',[PostController::class, 'store'])->name('store');
-
-Route::get('/{post}/edit',[PostController::class, 'edit'])->name('edit');;
-
-Route::put('/{post}',[PostController::class, 'update'])->name('update');
-
-Route::delete('/{post}',[PostController::class, 'destroy'])->name('destroy');
+Route::resource('post',PostController::class);
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+

@@ -5,7 +5,7 @@
     <h1 class="text-4xl text-center m-6">Create</h1>
 
     <div class="flex items-center justify-center">
-        <form class="divide-y divide-gray-400 bg-blue-500 rounded px-8 pt-6 pb-8 mb-4" action="{{route('store')}}" method="POST" enctype="multipart/form-data">
+        <form class="divide-y divide-gray-400 bg-blue-500 rounded px-8 pt-6 pb-8 mb-4" action="{{route('post.store')}}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="mb-4">
                 <label class="mb-2">
@@ -20,9 +20,9 @@
             <div class="mb-6">
                 <label class="mb-2">
                     Content:
-                    <textarea class="rounded block @error('postContent') is-invalid @enderror" name="postContent" rows="5" cols="50">{{old('postContent')}}</textarea>
+                    <textarea class="rounded block @error('content') is-invalid @enderror" name="content" rows="5" cols="50">{{old('content')}}</textarea>
 
-                    @error('postContent')
+                    @error('content')
                     <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
                 </label>
