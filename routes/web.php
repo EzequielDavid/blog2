@@ -15,8 +15,15 @@ use \App\Http\Controllers\PostController;
 */
 
 Route::get('/', [PostController::class, 'index'])->name('index');
+Route::get('/home', function (){
+    return view('home');
+});
 
 Route::resource('post',PostController::class);
+Route::get('practiceBootstrap',function ()
+{
+    return view('practice.index');
+});
 
 Auth::routes();
 

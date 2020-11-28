@@ -6,9 +6,15 @@ use App\Models\Post;
 use Illuminate\Http\Request;
 use App\Http\Requests\StorePost;
 use App\Http\Requests\UpdatePost;
+use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 
     public function index()
     {
@@ -23,14 +29,15 @@ class PostController extends Controller
 
     public function store(StorePost $request)
     {
+        $path= $request->file('image')->store('public');
         $post = Post::create($request->all());
 
-        $path= $request->file('image')->store('public');
         $post->image = basename($path);
+        $post->user_id = Auth::user()->id;
 
         $post->save();
 
-         return redirect()->route('post.show',$post);
+         return redirect()->route('post.show',$post)->with('succes','The post has been succefull posted ');
     }
 
     public function show(Post $post)
@@ -40,7 +47,15 @@ class PostController extends Controller
 
     public function edit(Post $post)
     {
-       return view('post.edit',compact('post'));
+        $userId = Auth::id();
+         if($userId == $post->user->id)
+         {
+             return view('post.edit',compact('post'));
+         }
+       else
+           {
+               return redirect()->back()->with('succes','No esta autorizado a editar este post');
+           }
     }
 
     public function update(UpdatePost $request,Post $post)
@@ -55,6 +70,7 @@ class PostController extends Controller
 
     public function destroy(Post $post)
     {
+
         $post->delete();
 
         return redirect()->route('post.index')->with('succes','Post Delete');

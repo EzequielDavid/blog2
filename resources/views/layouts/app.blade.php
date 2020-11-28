@@ -40,10 +40,18 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+                    @auth()
                         <!-- Authentication Links -->
+                            <form class="mr-4" action="{{route('logout')}}" method="post">
+                                @csrf
+                                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Logout</button>
+                            </form>
+                        @endauth
+
                         <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"><a href="{{route('post.create')}}">Create Post</a></button>
 
                     </ul>
+
                 </div>
             </div>
         </nav>
